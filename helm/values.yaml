@@ -1,7 +1,107 @@
 extraConfigmapMounts:
-  - name: etc-dashboards
-    mountPath: /etc/dashboards
-    configMap: etc-dashboards
+  - name: etc-dashboards-a
+    mountPath: /etc/dashboards/a
+    configMap: etc-dashboards-a
+    readOnly: true
+  - name: etc-dashboards-b
+    mountPath: /etc/dashboards/b
+    configMap: etc-dashboards-b
+    readOnly: true
+  - name: etc-dashboards-c
+    mountPath: /etc/dashboards/c
+    configMap: etc-dashboards-c
+    readOnly: true
+  - name: etc-dashboards-d
+    mountPath: /etc/dashboards/d
+    configMap: etc-dashboards-d
+    readOnly: true
+  - name: etc-dashboards-e
+    mountPath: /etc/dashboards/e
+    configMap: etc-dashboards-e
+    readOnly: true
+  - name: etc-dashboards-f
+    mountPath: /etc/dashboards/f
+    configMap: etc-dashboards-f
+    readOnly: true
+  - name: etc-dashboards-g
+    mountPath: /etc/dashboards/g
+    configMap: etc-dashboards-g
+    readOnly: true
+  - name: etc-dashboards-h
+    mountPath: /etc/dashboards/h
+    configMap: etc-dashboards-h
+    readOnly: true
+  - name: etc-dashboards-i
+    mountPath: /etc/dashboards/i
+    configMap: etc-dashboards-i
+    readOnly: true
+  - name: etc-dashboards-j
+    mountPath: /etc/dashboards/j
+    configMap: etc-dashboards-j
+    readOnly: true
+  - name: etc-dashboards-k
+    mountPath: /etc/dashboards/k
+    configMap: etc-dashboards-k
+    readOnly: true
+  - name: etc-dashboards-l
+    mountPath: /etc/dashboards/l
+    configMap: etc-dashboards-l
+    readOnly: true
+  - name: etc-dashboards-m
+    mountPath: /etc/dashboards/m
+    configMap: etc-dashboards-m
+    readOnly: true
+  - name: etc-dashboards-n
+    mountPath: /etc/dashboards/n
+    configMap: etc-dashboards-n
+    readOnly: true
+  - name: etc-dashboards-o
+    mountPath: /etc/dashboards/o
+    configMap: etc-dashboards-o
+    readOnly: true
+  - name: etc-dashboards-p
+    mountPath: /etc/dashboards/p
+    configMap: etc-dashboards-p
+    readOnly: true
+  - name: etc-dashboards-q
+    mountPath: /etc/dashboards/q
+    configMap: etc-dashboards-q
+    readOnly: true
+  - name: etc-dashboards-r
+    mountPath: /etc/dashboards/r
+    configMap: etc-dashboards-r
+    readOnly: true
+  - name: etc-dashboards-s
+    mountPath: /etc/dashboards/s
+    configMap: etc-dashboards-s
+    readOnly: true
+  - name: etc-dashboards-t
+    mountPath: /etc/dashboards/t
+    configMap: etc-dashboards-t
+    readOnly: true
+  - name: etc-dashboards-u
+    mountPath: /etc/dashboards/u
+    configMap: etc-dashboards-u
+    readOnly: true
+  - name: etc-dashboards-v
+    mountPath: /etc/dashboards/v
+    configMap: etc-dashboards-v
+    readOnly: true
+  - name: etc-dashboards-w
+    mountPath: /etc/dashboards/w
+    configMap: etc-dashboards-w
+    readOnly: true
+  - name: etc-dashboards-x
+    mountPath: /etc/dashboards/x
+    configMap: etc-dashboards-x
+    readOnly: true
+  - name: etc-dashboards-y
+    mountPath: /etc/dashboards/y
+    configMap: etc-dashboards-y
+    readOnly: true
+  - name: etc-dashboards-z
+    mountPath: /etc/dashboards/z
+    configMap: etc-dashboards-z
     readOnly: true
 
 annotations:
@@ -67,6 +167,7 @@ dashboardProviders:
     - name: 'default'
       orgId: 1
       folder: ''
+      foldersFromFilesStructure: false
       type: file
       disableDeletion: false
       editable: true
