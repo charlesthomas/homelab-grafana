@@ -1,0 +1,43 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: grafana
+
+commonAnnotations:
+  repo: https://github.com/charlesthomas/homelab-grafana
+
+resources:
+- resources/configmaps.yaml
+- resources/external-secrets.yaml
+- resources/namespaces.yaml
+patches:
+- patch: |-
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: all
+      namespace: grafana
+      annotations:
+        reloader.stakater.com/auto: "true"
+- patch: |-
+    apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    metadata:
+      name: grafana
+      namespace: grafana
+      annotations:
+        gethomepage.dev/href: https://grafana.crt.house
+        gethomepage.dev/enabled: "true"
+        gethomepage.dev/description: Metrics Viewer
+        gethomepage.dev/group: Kubernetes
+        gethomepage.dev/icon: grafana
+        gethomepage.dev/name: Grafana
+        gethomepage.dev/pod-selector: ""
+  target:
+    kind: Ingress
+helmCharts:
+- name: grafana
+  namespace: grafana
+  releaseName: grafana
+  repo: https://grafana.github.io/helm-charts
+  valuesFile: helm/values.yaml

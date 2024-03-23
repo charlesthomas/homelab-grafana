@@ -1,0 +1,31 @@
+_commit: v1.8.0-3-gda2eca8
+_src_path: /Users/crthomas/code/charlesthomas/homelab-template
+additionalResources: ''
+backups: false
+helm: true
+helmCrds: false
+helmName: grafana
+helmRelease: grafana
+helmRepo: https://grafana.github.io/helm-charts
+helmValues: helm/values.yaml
+helmVersion: ''
+homepageDescription: Metrics Viewer
+homepageEnabled: true
+homepageGroup: Kubernetes
+homepageIcon: grafana
+homepageName: Grafana
+ingHost: grafana.crt.house
+ingName: grafana
+ingress: false
+labels: ''
+name: grafana
+namespace: grafana
+pvc: false
+reloader: true
+resources:
+- configmaps.yaml
+- external-secrets.yaml
+service: false
+serviceAccount: false
+upstreamURL: https://grafana.com/
+url: https://github.com/charlesthomas/homelab-grafana
