@@ -15,7 +15,7 @@ patches:
     apiVersion: apps/v1
     kind: Deployment
     metadata:
-      name: all
+      name: grafana
       namespace: grafana
       annotations:
         reloader.stakater.com/auto: "true"
