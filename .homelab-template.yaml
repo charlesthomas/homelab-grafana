@@ -1,5 +1,5 @@
 _commit: v1.8.0-3-gda2eca8
-_src_path: /Users/crthomas/code/charlesthomas/homelab-template
+_src_path: /home/crthomas/code/charlesthomas/homelab-template
 additionalResources: ''
 backups: false
 helm: true
