@@ -159,7 +159,6 @@ datasources:
       jsonData:
         tlsSkipVerify: true
 
-
 dashboardProviders:
   dashboardproviders.yaml:
     apiVersion: 1
@@ -175,3 +174,6 @@ dashboardProviders:
         path: /etc/dashboards
 
 namespaceOverride: "grafana"
+
+plugins:
+  - yesoreyeram-infinity-datasource
