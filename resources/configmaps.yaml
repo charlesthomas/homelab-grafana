@@ -7468,7 +7468,7 @@ metadata:
   name: etc-dashboards-o
   namespace: grafana
 data:
-  offsite-backups.json: |
+  offsite-backups.json: |-
     {
       "annotations": {
         "list": [
@@ -7489,7 +7489,6 @@ data:
       "editable": true,
       "fiscalYearStartMonth": 0,
       "graphTooltip": 0,
-      "id": 30,
       "links": [],
       "liveNow": false,
       "panels": [
@@ -7510,6 +7509,7 @@ data:
                 "axisLabel": "",
                 "axisPlacement": "auto",
                 "barAlignment": 0,
+                "barWidthFactor": 0.6,
                 "drawStyle": "line",
                 "fillOpacity": 0,
                 "gradientMode": "none",
@@ -7602,6 +7602,7 @@ data:
                 "axisLabel": "",
                 "axisPlacement": "auto",
                 "barAlignment": 0,
+                "barWidthFactor": 0.6,
                 "drawStyle": "line",
                 "fillOpacity": 0,
                 "gradientMode": "none",
@@ -7679,6 +7680,7 @@ data:
         },
         {
           "datasource": {
+            "default": false,
             "type": "loki",
             "uid": "P982945308D3682D1"
           },
@@ -7706,28 +7708,67 @@ data:
                 "uid": "P982945308D3682D1"
               },
               "editorMode": "builder",
-              "expr": "{namespace=\"offsite-backups\"} |= ``",
+              "expr": "{namespace=\"offsite-backups\", container=\"rsync\"} |= ``",
               "queryType": "range",
               "refId": "A"
             }
           ],
-          "title": "offsite-backups logs",
+          "title": "offsite-backups rsync logs",
+          "type": "logs"
+        },
+        {
+          "datasource": {
+            "default": false,
+            "type": "loki",
+            "uid": "P982945308D3682D1"
+          },
+          "gridPos": {
+            "h": 16,
+            "w": 24,
+            "x": 0,
+            "y": 26
+          },
+          "id": 4,
+          "options": {
+            "dedupStrategy": "none",
+            "enableLogDetails": true,
+            "prettifyLogMessage": false,
+            "showCommonLabels": false,
+            "showLabels": false,
+            "showTime": true,
+            "sortOrder": "Descending",
+            "wrapLogMessage": true
+          },
+          "targets": [
+            {
+              "datasource": {
+                "type": "loki",
+                "uid": "P982945308D3682D1"
+              },
+              "editorMode": "builder",
+              "expr": "{namespace=\"offsite-backups\", container=\"tailscale\"} |= ``",
+              "queryType": "range",
+              "refId": "A"
+            }
+          ],
+          "title": "offsite-backups tailscale logs",
           "type": "logs"
         }
       ],
       "refresh": "",
-      "schemaVersion": 38,
+      "schemaVersion": 39,
       "tags": [],
       "templating": {
         "list": []
       },
       "time": {
-        "from": "now-5m",
+        "from": "now-24h",
         "to": "now"
       },
       "timepicker": {},
       "timezone": "",
       "title": "offsite-backups",
+      "uid": "cdzwmwevje51cc",
       "version": 1,
       "weekStart": ""
     }
