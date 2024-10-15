@@ -127,6 +127,8 @@ persistence:
   type: pvc
   enabled: true
   storageClassName: longhorn
+  accessModes:
+    - ReadWriteMany
 
 admin:
   existingSecret: "grafana"
