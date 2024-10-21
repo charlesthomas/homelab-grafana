@@ -114,7 +114,7 @@ ingress:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
     external-dns.alpha.kubernetes.io/hostname: grafana.crt.house
-    nginx.org/websocket-services: grafana
+  ingressClassName: nginx-internal
   path: /
   pathType: Prefix
   hosts:
