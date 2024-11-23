@@ -160,6 +160,18 @@ datasources:
       url: http://loki.loki.svc:3100
       jsonData:
         tlsSkipVerify: true
+    - name: prometheus
+      type: prometheus
+      access: proxy
+      url: http://prometheus-server.prometheus.svc
+      jsonData:
+        httpMethod: POST
+        manageAlerts: true
+        prometheusType: Prometheus
+        prometheusVersion: 2.55.0
+        cacheLevel: 'High'
+        disableRecordingRules: false
+        incrementalQueryOverlapWindow: 10m
 
 dashboardProviders:
   dashboardproviders.yaml:
