@@ -190,4 +190,3 @@ dashboardProviders:
 namespaceOverride: "grafana"
 
 plugins:
-  - yesoreyeram-infinity-datasource
