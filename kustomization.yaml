@@ -41,3 +41,11 @@ helmCharts:
   releaseName: grafana
   repo: https://grafana.github.io/helm-charts
   valuesFile: helm/values.yaml
+configMapGenerator:
+- name: grafana-dashboard-grafana
+  files:
+  - grafana/grafana.json
+  options:
+    disableNameSuffixHash: true
+    labels:
+      grafana_dashboard: "1"
