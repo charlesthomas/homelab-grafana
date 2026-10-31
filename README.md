@@ -4,18 +4,12 @@ This is a mirco-services repo for deploying
 [grafana](https://grafana.com/)
 into [my homelab](https://github.com/charlesthomas/homelab).
 
-## generate dashboards
+## dashboards
 
-in an effort to make it easy to provision dashboards without going crazy trying to maintain
-a giant configmap full of json blobs, i created `generate-dashboards.sh`.
+grafana's dashboard sidecar loads every ConfigMap in the cluster labeled `grafana_dashboard: "1"`.
 
-it uses `yq` to dynamically generate a configmap of all the dashboards stored in `dashboards/` so that each dashboard can be stored seaparately.
-
-this requires regenerating the configmap every time you add a new dashboard:
-
-```bash
-./generate-dashboards.sh
-```
+each templated service ships its own `grafana/<name>.json` that way via `configMapGenerator` in its `kustomization.yaml`.
+cluster-wide dashboards that don't belong to any one service live in `resources/dashboards/`.
 
 ---
 This repo is templated via

@@ -7,7 +7,7 @@ commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-grafana
 
 resources:
-- resources/configmaps.yaml
+- resources/dashboards/
 - resources/external-secrets.yaml
 - resources/namespaces.yaml
 patches:

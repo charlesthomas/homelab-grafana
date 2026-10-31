@@ -1,6 +1,6 @@
 _commit: v1.12.1-16-gd9a8f1b
 _src_path: /Users/crthomas/code/charlesthomas/homelab-template
-additionalResources: ''
+additionalResources: dashboards/
 cnpg: false
 grafanaDashboard: true
 helm: true
@@ -24,7 +24,6 @@ namespace: grafana
 pvc: false
 reloader: true
 resources:
-- configmaps.yaml
 - external-secrets.yaml
 service: false
 serviceAccount: false
