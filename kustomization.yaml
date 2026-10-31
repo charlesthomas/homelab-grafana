@@ -41,6 +41,7 @@ helmCharts:
   releaseName: grafana
   repo: https://grafana.github.io/helm-charts
   valuesFile: helm/values.yaml
+  version: 10.5.15
 configMapGenerator:
 - name: grafana-dashboard-grafana
   files:

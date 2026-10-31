@@ -9,7 +9,7 @@ helmName: grafana
 helmRelease: grafana
 helmRepo: https://grafana.github.io/helm-charts
 helmValues: helm/values.yaml
-helmVersion: ''
+helmVersion: 10.5.15
 homepageDescription: Metrics Viewer
 homepageEnabled: true
 homepageGroup: Kubernetes
